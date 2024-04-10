@@ -1,0 +1,103 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Ground
+  - Branch
+  - Clock
+  - Milk
+  - Item
+  - PlayerCamera
+  - GameManager
+  - Shepherd
+  - Dog
+  - Cloud
+  - HiddenPlattform
+  - Sheep
+  - Box
+  - PrefabSheep
+  - LeverShow
+  - LeverHide
+  - LeverMove
+  - PrefabBigBox
+  - PrefabSmallBox
+  - MenuItem
+  - PrefabBox
+  - Grid
+  - waypointSheep
+  - nameInput
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - Dog
+  - Shepherd
+  - Ground
+  - CamBoxLayer
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Sky
+    uniqueID: 1749653427
+    locked: 0
+  - name: GreyMountains
+    uniqueID: 3027433147
+    locked: 0
+  - name: BlkMountains
+    uniqueID: 1320110965
+    locked: 0
+  - name: Trees
+    uniqueID: 2311604023
+    locked: 0
+  - name: Clouds
+    uniqueID: 1080157703
+    locked: 0
+  - name: Bush
+    uniqueID: 2961028545
+    locked: 0
+  - name: Background
+    uniqueID: 3249089541
+    locked: 0
+  - name: Ground
+    uniqueID: 3514768157
+    locked: 0
+  - name: Items
+    uniqueID: 805541047
+    locked: 0
+  - name: Foreground
+    uniqueID: 327783903
+    locked: 0
+  - name: Player
+    uniqueID: 2888593207
+    locked: 0
+  - name: Front
+    uniqueID: 4203209377
+    locked: 0

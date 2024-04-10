@@ -1,0 +1,41 @@
+stages: 
+  - test
+  - build
+
+
+variables:
+  UNITY_COMMAND: "xvfb-run --auto-servernum --server-args='-screen 0 640x480x24' /opt/Unity/Editor/Unity -batchmode -nographics -logfile /dev/stdout -quit"
+  BUILD_OUTPUT_FOLDER: 'Builds/Win64'
+  BUILD_OUTPUT_NAME: 'Test.exe'
+  GIT_CLEAN_FLAGS: none
+
+
+unit-test: 
+  script: Start-Process "C:\Program Files\Unity\Hub\Editor\2020.3.4f1\Editor\Unity.exe" -ArgumentList "-batchmode -projectPath . -runTests  -testPlatform editmode -logFile -testResults ./unit-tests.xml"
+  stage: test
+  tags: 
+    - git-run1
+
+
+.build: &build
+     stage: build
+     tags: 
+           - git-run1
+     # variables:
+     script:
+          Start-Process "C:\Program Files\Unity\Hub\Editor\2020.3.4f1\Editor\Unity.exe" -ArgumentList  "-projectPath %CI_PROJECT_DIR% -logfile C:\Logs\%BUILD_TARGET%.log -customBuildPath %BUILD_PATH% -customProjectName %CI_PROJECT_NAME% -customBuildTarget %BUILD_TARGET% -pipelineId %CI_PIPELINE_ID% -batchmode -nographics -executeMethod BuildScript.Build -quit"
+          
+    
+     
+Windows:
+    <<: *build
+    variables:
+         BUILD_TARGET: StandaloneWindows64
+         BUILD_PATH : ./Builds
+ 
+    only:
+         variables:
+              - $Target == "Windows"
+              - $Target == "windows"
+              - $Target == "All"
+              - $Target == null
