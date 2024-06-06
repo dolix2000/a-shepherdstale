@@ -7,6 +7,7 @@ A 2D Platform Game in which the player is able to switch between two characters 
 
 ## Description
 A Shepherd's Tale is a single-player game in which the player has control over a shepherd and his dog. The player uses the skills of both characters to solve puzzles, overcome various obstacles and bring the sheep of the shepherd home safely.
+This game was developed during the 3rd semester of my studies.
 
 ## How to start the Game
 
